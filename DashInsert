@@ -1,0 +1,20 @@
+static String DashInsert(int num){
+		int last;
+		StringBuilder sb = new StringBuilder();
+		boolean lastIsOdd = false;
+		while(num != 0){
+			last = num % 10;
+			if(last % 2 == 0){
+				lastIsOdd = false;
+			}
+			if(last % 2 != 0){
+				if(lastIsOdd){
+					sb.append("-");
+				}
+				lastIsOdd = true;
+			}
+			sb.append(last);
+			num = num / 10;
+		}
+		return sb.reverse().toString();
+	}
