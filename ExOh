@@ -1,0 +1,15 @@
+static boolean ExOh(String str){
+		int countX = 0;
+		int countO = 0;
+		for(int i = 0; i < str.length(); i++){
+			if(str.charAt(i) == 'x'){
+				countX++;
+				System.out.println(countX);
+			}
+			if(str.charAt(i) == 'o'){
+				countO++;
+			}
+				
+		}
+		return countO == countX;
+	}
